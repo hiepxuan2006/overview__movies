@@ -1,0 +1,35 @@
+@import "./Components/scss/";
+
+* {
+    padding   : 0;
+    margin    : 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family    : 'Ubuntu', sans-serif;
+    scroll-behavior: inherit;
+}
+
+a {
+    text-decoration: none;
+    color          : inherit;
+}
+
+:root {
+    --colorBackground: rgba(16, 16, 16);
+    --colorHeader    : rgba(0, 0, 0);
+
+}
+
+@mixin mobile {
+    @media screen and (max-width:739px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width:1024px) {
+        @content;
+    }
+}

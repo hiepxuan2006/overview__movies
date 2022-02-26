@@ -1,0 +1,51 @@
+.footer {
+    background-image   : url(../../assets/images/footer-bg.jpg);
+    position           : relative;
+    background-position: top;
+    background-size    : cover;
+    background-repeat  : no-repeat;
+
+
+    .footer__content {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+        height         : 400px;
+        align-items    : center;
+
+        h1 {
+            color    : #fff;
+            font-size: 30px;
+        }
+
+        .footer__logo {
+            height : 250px;
+            width  : 300px;
+            z-index: 100;
+
+
+            img {
+                height: 100%;
+                width : 100%;
+                color : #fff;
+
+            }
+
+        }
+
+        .contact {
+            display    : flex;
+            align-items: center;
+            user-select: none;
+
+            .fb__icon {
+                padding  : 12px;
+                font-size: 28px;
+                color    : #fff;
+                cursor   : pointer;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,128 @@
+.intro {
+    background-color: var(--colorBackground);
+    color           : #fff;
+    position        : relative;
+    display         : block;
+    overflow        : hidden;
+    height          : 100%;
+    user-select     : none;
+
+
+    .swiper-wrapper {
+        display              : grid;
+        grid-template-columns: repeat(20, 100%);
+        position             : relative;
+
+        .intro__item {
+            &.active>.intro__info>.info__img {
+                img {
+                    transform       : scale(1);
+                    transition-delay: 0.3s;
+                }
+            }
+
+
+            &.active>.intro__info>.intro__desc {
+
+                .btns,
+                .title,
+                .overview {
+                    opacity: 1;
+                }
+
+                .title {
+                    transition-delay: 0.3s;
+                }
+
+                .overview {
+                    transition-delay: 0.6s;
+                }
+
+                .btns {
+                    transition-delay: 0.9s;
+                }
+            }
+
+            .intro__info {
+                position       : absolute;
+                top            : 45%;
+                transform      : translateY(-50%);
+                width          : 100%;
+                z-index        : 100;
+                display        : flex;
+                align-items    : center;
+                justify-content: center;
+                gap            : 50px;
+                padding        : 100px;
+
+                .intro__desc {
+                    width     : 100%;
+                    transition: opacity 0.5s ease;
+
+                    .btns,
+                    .title,
+                    .overview {
+                        opacity   : 0;
+                        transition: opacity 0.5s ease;
+                    }
+
+                    .title {
+                        font-size    : 50px;
+                        font-weight  : 600;
+                        margin-bottom: 20px;
+                    }
+
+
+                    .overview {
+                        font-size    : 18px;
+                        font-weight  : 700;
+                        margin-bottom: 20px;
+                    }
+
+                    .btns {
+                        display: flex;
+                        gap    : 20px;
+
+                        button {
+                            padding         : 16px 20px;
+                            min-width       : 200px;
+                            background-color: transparent;
+                            border          : 1px solid #fff;
+                            border-radius   : 30px;
+                            color           : #fff;
+                            font-size       : 20px;
+                            font-weight     : 600;
+                            cursor          : pointer;
+                        }
+
+                        & .btn__now {
+                            background-color: rgba($color: #e90000, $alpha: 1.0);
+                        }
+                    }
+
+                    .overview {}
+                }
+
+                .info__img {
+                    width : 100%;
+                    height: 100%;
+
+                    img {
+                        display      : flex;
+                        margin       : 0 auto;
+                        width        : 300px;
+                        border-radius: 12px;
+                        transform    : scale(0);
+                        transition   : transform .6s ease-in-out;
+                    }
+                }
+            }
+
+            img {
+                width : 100%;
+                height: 100%;
+            }
+        }
+    }
+
+}
