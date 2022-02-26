@@ -62,15 +62,16 @@ function Movies(props) {
         </div>
 
         {
-          (slug.type === null) ?
+          (slug.type) ?
             (
-              <div className="button">
-                <p onClick={handleAddPage}>View More</p>
-              </div>)
-            : null
+              null
+            )
+            : (<div className="button">
+              <p onClick={handleAddPage}>View More</p>
+            </div>)
         }
-      </div>
-    </div>
+      </div >
+    </div >
   );
 }
 
